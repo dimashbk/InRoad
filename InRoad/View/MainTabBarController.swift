@@ -32,6 +32,7 @@ class MainTabBarController: UITabBarController {
     }
     private func setTabBarAppearance(){
         tabBar.tintColor = .tabBarItemAccent
+        tabBar.backgroundColor = .white
     }
 
 }
