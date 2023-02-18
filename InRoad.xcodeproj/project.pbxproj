@@ -14,6 +14,7 @@
 		1D03B31429A0E30E0004589A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D03B31229A0E30E0004589A /* LaunchScreen.storyboard */; };
 		1D03B31E29A0E4810004589A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B31D29A0E4810004589A /* HomeViewController.swift */; };
 		1D03B32029A0E4950004589A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B31F29A0E4950004589A /* SettingsViewController.swift */; };
+		1D03B32329A0EB3D0004589A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B32229A0EB3D0004589A /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1D03B31529A0E30E0004589A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D03B31D29A0E4810004589A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1D03B31F29A0E4950004589A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1D03B32229A0EB3D0004589A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				1D03B31029A0E30E0004589A /* Assets.xcassets */,
 				1D03B31229A0E30E0004589A /* LaunchScreen.storyboard */,
 				1D03B31529A0E30E0004589A /* Info.plist */,
+				1D03B32229A0EB3D0004589A /* UIColorExtension.swift */,
 			);
 			path = InRoad;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				1D03B30A29A0E30D0004589A /* SceneDelegate.swift in Sources */,
 				1D03B32029A0E4950004589A /* SettingsViewController.swift in Sources */,
 				1D03B31E29A0E4810004589A /* HomeViewController.swift in Sources */,
+				1D03B32329A0EB3D0004589A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

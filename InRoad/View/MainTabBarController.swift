@@ -11,19 +11,27 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         generateTabBar()
+        setTabBarAppearance()
+        view.backgroundColor = .white
     }
     private func generateTabBar(){
         viewControllers = [
-            generateVC(viewController: HomeViewController(), title: "Карта", image: UIImage(named: "Map")),
-            generateVC(viewController: HomeViewController(), title: "Настройки", image: UIImage(named: "Settings"))
+            generateVC(viewController: HomeViewController(),
+                       title: "Карта",
+                       image: UIImage(named: "Map")),
+            generateVC(viewController: SettingsViewController(),
+                       title: "Настройки",
+                       image: UIImage(named: "Settings"))
         ]
     }
     private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController{
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image
         return viewController
+    }
+    private func setTabBarAppearance(){
+        tabBar.tintColor = .tabBarItemAccent
     }
 
 }
