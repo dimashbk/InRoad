@@ -11,12 +11,13 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        
+        view.backgroundColor = .white
+        generateTabBar()
     }
     private func generateTabBar(){
         viewControllers = [
-            generateVC(viewController: HomeViewController(), title: "Карта", image: UIImage(named: "Map"))
+            generateVC(viewController: HomeViewController(), title: "Карта", image: UIImage(named: "Map")),
+            generateVC(viewController: HomeViewController(), title: "Настройки", image: UIImage(named: "Settings"))
         ]
     }
     private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController{
