@@ -11,9 +11,11 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
-    
-    
+    let plusZoom = UIButton()
+    let minusZoom = UIButton()
+    let myLocation = UIButton()
     var segControl = UISegmentedControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpGoogleMaps()
@@ -55,6 +57,8 @@ class HomeViewController: UIViewController {
         
         segControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.tabBarItemAccent],
                                           for: .selected)
+        segControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1)],
+                                          for: .normal)
         segControl.selectedSegmentIndex = 0
         segControl.removeBorder()
         view.addSubview(segControl)
@@ -64,6 +68,34 @@ class HomeViewController: UIViewController {
             make.width.equalTo(358)
             make.height.equalTo(46)
         }
+        view.addSubview(plusZoom)
+        plusZoom.setBackgroundImage(UIImage(named: "Plus"), for: .normal)
+        plusZoom.snp.makeConstraints { make in
+            make.width.height.equalTo(46)
+            make.top.equalToSuperview().inset(343)
+            make.right.equalToSuperview().inset(13)
+        }
+        view.addSubview(minusZoom)
+        minusZoom.setBackgroundImage(UIImage(named: "Minus"), for: .normal)
+        minusZoom.snp.makeConstraints { make in
+            make.width.height.equalTo(46)
+            make.top.equalTo(plusZoom.snp.bottom).offset(10)
+            make.right.equalToSuperview().inset(13)
+        }
+        view.addSubview(myLocation)
+        myLocation.setBackgroundImage(UIImage(named: "myLocation"), for: .normal)
+        myLocation.snp.makeConstraints { make in
+            make.width.height.equalTo(46)
+            make.top.equalTo(minusZoom.snp.bottom).offset(10)
+            make.right.equalToSuperview().inset(13)
+        }
+        myLocation.addTarget(self, action: #selector(showMyLocation), for: .touchUpInside)
+        
+        
+    }
+    @objc func showMyLocation(){
+//        mapView.isMyLocationEnabled = true
+        print("my location")
     }
     
 
