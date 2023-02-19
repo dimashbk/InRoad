@@ -9,20 +9,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    let items = ["Точки",
-                 "Cветовые схемы"]
-    var segmentControl: UISegmentedControl{
-        let control = UISegmentedControl(items: items)
-        return control
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(segmentControl)
-        
+        view.backgroundColor = .tabBarItemAccent
     }
+
     
 
     /*

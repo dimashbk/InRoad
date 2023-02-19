@@ -13,7 +13,6 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         generateTabBar()
         setTabBarAppearance()
-        view.backgroundColor = .white
     }
     private func generateTabBar(){
         viewControllers = [
@@ -25,11 +24,17 @@ class MainTabBarController: UITabBarController {
                        image: UIImage(named: "Settings"))
         ]
     }
+//    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UINavigationController{
+//        viewController.tabBarItem.title = title
+//        viewController.tabBarItem.image = image
+//        let navController = UINavigationController(rootViewController: viewController)
+//        return navController
+//    }
     private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController{
-        viewController.tabBarItem.title = title
-        viewController.tabBarItem.image = image
-        return viewController
-    }
+            viewController.tabBarItem.title = title
+            viewController.tabBarItem.image = image
+            return viewController
+        }
     private func setTabBarAppearance(){
         tabBar.tintColor = .tabBarItemAccent
         tabBar.backgroundColor = .white

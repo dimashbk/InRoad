@@ -10,23 +10,33 @@ import GoogleMaps
 import SnapKit
 
 class HomeViewController: UIViewController {
-    let items = ["Точки",
-                 "Cветовые схемы"]
-    var segmentControl: UISegmentedControl{
-        let control = UISegmentedControl(items: items)
-        return control
-    }
     
+    
+    
+    var segControl = UISegmentedControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpGoogleMaps()
+        view.backgroundColor = .white
         initialize()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        segControl.layer.cornerRadius = 16
+        segControl.clipsToBounds = false
+        segControl.layer.masksToBounds = false
+        segControl.layer.shadowRadius = 4
+        segControl.layer.shadowOpacity = 1
+        segControl.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        segControl.layer.shadowPath = UIBezierPath(roundedRect: segControl.bounds, cornerRadius: 16).cgPath
+    }
+
 
     private func setUpGoogleMaps(){
         GMSServices.provideAPIKey("AIzaSyCDM2tOxkbG3s2FifKxEZPwSIMSUZveaT8")
-        
-        let camera = GMSCameraPosition.camera(withLatitude: 43.22126814174525,                                                                             longitude:    76.85327279571138,
+
+        let camera = GMSCameraPosition.camera(withLatitude: 43.22126814174525,
+                                              longitude:    76.85327279571138,
                                               zoom:         15.0)
         let mapView = GMSMapView.map(withFrame:             view.frame,
                                      camera:                camera)
@@ -39,13 +49,21 @@ class HomeViewController: UIViewController {
         marker.map = mapView
     }
     private func initialize(){
-        view.addSubview(segmentControl)
-        segmentControl.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
-            make.width.equalTo(100)
-            make.height.equalTo(50)
-        }
+        let items = ["Точки",
+                     "Цветовые схемы"]
+        segControl = UISegmentedControl(items: items)
         
+        segControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.tabBarItemAccent],
+                                          for: .selected)
+        segControl.selectedSegmentIndex = 0
+        segControl.removeBorder()
+        view.addSubview(segControl)
+        segControl.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(50)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(358)
+            make.height.equalTo(46)
+        }
     }
     
 
