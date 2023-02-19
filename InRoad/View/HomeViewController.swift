@@ -14,23 +14,23 @@ class HomeViewController: UIViewController {
     let plusZoom = UIButton()
     let minusZoom = UIButton()
     let myLocation = UIButton()
+    let viewToSC = UIView()
     var segControl = UISegmentedControl()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpGoogleMaps()
-        view.backgroundColor = .white
         initialize()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         segControl.layer.cornerRadius = 16
-        segControl.clipsToBounds = false
-        segControl.layer.masksToBounds = false
-        segControl.layer.shadowRadius = 4
-        segControl.layer.shadowOpacity = 1
-        segControl.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
-        segControl.layer.shadowPath = UIBezierPath(roundedRect: segControl.bounds, cornerRadius: 16).cgPath
+        segControl.layer.masksToBounds = true
+        viewToSC.layer.shadowRadius = 3
+        viewToSC.layer.shadowOpacity = 10
+        viewToSC.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        viewToSC.layer.shadowPath = UIBezierPath(roundedRect: viewToSC.bounds, cornerRadius: 16).cgPath
     }
 
 
@@ -51,6 +51,14 @@ class HomeViewController: UIViewController {
         marker.map = mapView
     }
     private func initialize(){
+        
+        view.addSubview(viewToSC)
+        viewToSC.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(50)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(358)
+            make.height.equalTo(46)
+        }
         let items = ["Точки",
                      "Цветовые схемы"]
         segControl = UISegmentedControl(items: items)
@@ -61,13 +69,11 @@ class HomeViewController: UIViewController {
                                           for: .normal)
         segControl.selectedSegmentIndex = 0
         segControl.removeBorder()
-        view.addSubview(segControl)
+        viewToSC.addSubview(segControl)
         segControl.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(50)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(358)
-            make.height.equalTo(46)
+            make.edges.equalToSuperview()
         }
+        
         view.addSubview(plusZoom)
         plusZoom.setBackgroundImage(UIImage(named: "Plus"), for: .normal)
         plusZoom.snp.makeConstraints { make in
