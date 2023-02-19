@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
 
 
     private func setUpGoogleMaps(){
-        GMSServices.provideAPIKey("AIzaSyCDM2tOxkbG3s2FifKxEZPwSIMSUZveaT8")
+        GMSServices.provideAPIKey("...")
 
         let camera = GMSCameraPosition.camera(withLatitude: 43.22126814174525,
                                               longitude:    76.85327279571138,
