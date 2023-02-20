@@ -7,23 +7,60 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-
+class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
+    
+    let tableView = UITableView()
+    let feedbackButton = UIButton()
+    let cellId = "au"
+    let settings = ["Режим пользования","Тип автомобиля","Изменить город","Выбрать язык приложения"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .tabBarItemAccent
+        tableView.register(SettingsCell.self, forCellReuseIdentifier: cellId)
+        initilize()
     }
 
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func numberOfSections(in tableView: UITableView) -> Int {
+           // #warning Incomplete implementation, return the number of sections
+           return 1
+       }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return settings.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SettingsCell
+        cell.label.text = settings[indexPath.row]
+        return cell
+    }
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 64
+        }
+    
+    private func initilize(){
+        view.backgroundColor = .white
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        view.addSubview(feedbackButton)
+        feedbackButton.backgroundColor = .tabBarItemAccent
+        feedbackButton.layer.cornerRadius = 16
+        feedbackButton.setTitle("Оставить отзыв", for: .normal)
+        feedbackButton.snp.makeConstraints { make in
+            make.height.equalTo(53)
+            make.width.equalTo(352)
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(661)
+        }
+    }
+    
+    
 }
+
+

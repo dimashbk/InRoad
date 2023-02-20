@@ -27,8 +27,8 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         segControl.layer.cornerRadius = 16
         segControl.layer.masksToBounds = true
-        viewToSC.layer.shadowRadius = 3
-        viewToSC.layer.shadowOpacity = 10
+        viewToSC.layer.shadowRadius = 4
+        viewToSC.layer.shadowOpacity = 1
         viewToSC.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
         viewToSC.layer.shadowPath = UIBezierPath(roundedRect: viewToSC.bounds, cornerRadius: 16).cgPath
     }

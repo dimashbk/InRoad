@@ -15,6 +15,7 @@
 		1D03B31E29A0E4810004589A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B31D29A0E4810004589A /* HomeViewController.swift */; };
 		1D03B32029A0E4950004589A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B31F29A0E4950004589A /* SettingsViewController.swift */; };
 		1D03B32329A0EB3D0004589A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B32229A0EB3D0004589A /* UIColorExtension.swift */; };
+		1D0E282529A3985A00A95E1E /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E282429A3985A00A95E1E /* SettingsCell.swift */; };
 		1DD797D429A21B4C00440070 /* SegmentedControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */; };
 		62882847A41A8F9D52BEC525 /* Pods_InRoad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AA1EF9F0E0E50B1531EA17 /* Pods_InRoad.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		1D03B31D29A0E4810004589A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1D03B31F29A0E4950004589A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1D03B32229A0EB3D0004589A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1D0E282429A3985A00A95E1E /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlExtension.swift; sourceTree = "<group>"; };
 		21577A90278CE0E186D6AC00 /* Pods-InRoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InRoad.release.xcconfig"; path = "Target Support Files/Pods-InRoad/Pods-InRoad.release.xcconfig"; sourceTree = "<group>"; };
 		9EC3FD1C277787C732AC0C63 /* Pods-InRoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InRoad.debug.xcconfig"; path = "Target Support Files/Pods-InRoad/Pods-InRoad.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				1D03B31D29A0E4810004589A /* HomeViewController.swift */,
 				1D03B31F29A0E4950004589A /* SettingsViewController.swift */,
 				1D03B30B29A0E30D0004589A /* MainTabBarController.swift */,
+				1D0E282429A3985A00A95E1E /* SettingsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				1D03B30A29A0E30D0004589A /* SceneDelegate.swift in Sources */,
 				1D03B32029A0E4950004589A /* SettingsViewController.swift in Sources */,
 				1D03B31E29A0E4810004589A /* HomeViewController.swift in Sources */,
+				1D0E282529A3985A00A95E1E /* SettingsCell.swift in Sources */,
 				1D03B32329A0EB3D0004589A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
