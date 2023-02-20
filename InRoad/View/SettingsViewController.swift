@@ -51,7 +51,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewD
         view.addSubview(feedbackButton)
         feedbackButton.backgroundColor = .tabBarItemAccent
         feedbackButton.layer.cornerRadius = 16
-        feedbackButton.setTitle("Оставить отзыв", for: .normal)
+        feedbackButton.setTitle("Написать отзыв", for: .normal)
+        feedbackButton.addTarget(self, action: #selector(toFeedback), for: .touchUpInside)
         feedbackButton.snp.makeConstraints { make in
             make.height.equalTo(53)
             make.width.equalTo(352)
@@ -59,7 +60,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewD
             make.top.equalToSuperview().inset(661)
         }
     }
-    
+    @objc func toFeedback(){
+        print("feedback")
+    }
     
 }
 
