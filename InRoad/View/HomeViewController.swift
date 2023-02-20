@@ -23,10 +23,9 @@ class HomeViewController: UIViewController {
         setUpGoogleMaps()
         initialize()
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        segControl.layer.cornerRadius = 16
-        segControl.layer.masksToBounds = true
         viewToSC.layer.shadowRadius = 4
         viewToSC.layer.shadowOpacity = 1
         viewToSC.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
@@ -51,7 +50,6 @@ class HomeViewController: UIViewController {
         marker.map = mapView
     }
     private func initialize(){
-        
         view.addSubview(viewToSC)
         viewToSC.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(50)
