@@ -43,6 +43,7 @@ extension SettingsCell{
     
         self.addSubview(label)
         label.font = UIFont(name: "Stolzl-Regular", size: 16)
+        label.textColor = UIColor(red: 0.204, green: 0.204, blue: 0.204, alpha: 1)
         label.snp.makeConstraints{ maker in
             maker.centerY.equalToSuperview()
             maker.left.equalToSuperview().inset(19)

@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUpGoogleMaps()
         initialize()
+        
     }
     
     override func viewDidLayoutSubviews() {

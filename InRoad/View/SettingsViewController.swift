@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewD
         super.viewDidLoad()
         tableView.register(SettingsCell.self, forCellReuseIdentifier: cellId)
         initilize()
+
     }
 
     
@@ -52,6 +53,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewD
         feedbackButton.backgroundColor = .tabBarItemAccent
         feedbackButton.layer.cornerRadius = 16
         feedbackButton.setTitle("Написать отзыв", for: .normal)
+        feedbackButton.titleLabel?.font = UIFont(name: "Stolzl-Medium", size: 16)
         feedbackButton.addTarget(self, action: #selector(toFeedback), for: .touchUpInside)
         feedbackButton.snp.makeConstraints { make in
             make.height.equalTo(53)
