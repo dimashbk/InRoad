@@ -42,6 +42,7 @@ extension SettingsCell{
     private func initialize(){
     
         self.addSubview(label)
+        label.font = UIFont(name: "Stolzl-Regular", size: 16)
         label.snp.makeConstraints{ maker in
             maker.centerY.equalToSuperview()
             maker.left.equalToSuperview().inset(19)

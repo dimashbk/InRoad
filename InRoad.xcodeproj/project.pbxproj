@@ -17,6 +17,7 @@
 		1D03B32329A0EB3D0004589A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B32229A0EB3D0004589A /* UIColorExtension.swift */; };
 		1D0E282529A3985A00A95E1E /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E282429A3985A00A95E1E /* SettingsCell.swift */; };
 		1DD797D429A21B4C00440070 /* SegmentedControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */; };
+		1DE81E4529A51854007FED19 /* Stolzl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DE81E4429A51854007FED19 /* Stolzl-Regular.ttf */; };
 		62882847A41A8F9D52BEC525 /* Pods_InRoad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AA1EF9F0E0E50B1531EA17 /* Pods_InRoad.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1D03B32229A0EB3D0004589A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1D0E282429A3985A00A95E1E /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlExtension.swift; sourceTree = "<group>"; };
+		1DE81E4429A51854007FED19 /* Stolzl-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stolzl-Regular.ttf"; sourceTree = "<group>"; };
 		21577A90278CE0E186D6AC00 /* Pods-InRoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InRoad.release.xcconfig"; path = "Target Support Files/Pods-InRoad/Pods-InRoad.release.xcconfig"; sourceTree = "<group>"; };
 		9EC3FD1C277787C732AC0C63 /* Pods-InRoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InRoad.debug.xcconfig"; path = "Target Support Files/Pods-InRoad/Pods-InRoad.debug.xcconfig"; sourceTree = "<group>"; };
 		B3AA1EF9F0E0E50B1531EA17 /* Pods_InRoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InRoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 		1D03B30629A0E30D0004589A /* InRoad */ = {
 			isa = PBXGroup;
 			children = (
+				1DE81E4329A51831007FED19 /* Fonts */,
 				1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */,
 				1D03B32129A0E4AB0004589A /* View */,
 				1D03B30729A0E30D0004589A /* AppDelegate.swift */,
@@ -92,6 +95,14 @@
 				1D0E282429A3985A00A95E1E /* SettingsCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1DE81E4329A51831007FED19 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1DE81E4429A51854007FED19 /* Stolzl-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		22B2E6BD78606EDE68F11297 /* Pods */ = {
@@ -173,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D03B31429A0E30E0004589A /* LaunchScreen.storyboard in Resources */,
+				1DE81E4529A51854007FED19 /* Stolzl-Regular.ttf in Resources */,
 				1D03B31129A0E30E0004589A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
