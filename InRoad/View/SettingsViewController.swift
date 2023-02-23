@@ -59,11 +59,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewD
             make.height.equalTo(53)
             make.width.equalTo(352)
             make.centerX.equalToSuperview()
+            
             make.top.equalToSuperview().inset(661)
         }
     }
     @objc func toFeedback(){
-        print("feedback")
+        present(FeedbackViewController(), animated: true)
     }
     
 }

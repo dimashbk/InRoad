@@ -62,11 +62,15 @@ class HomeViewController: UIViewController {
                      "Цветовые схемы"]
         segControl = UISegmentedControl(items: items)
         
+        
         segControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.tabBarItemAccent],
                                           for: .selected)
+       
         segControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1)],
                                           for: .normal)
         segControl.selectedSegmentIndex = 0
+//        let attr = NSDictionary(object: UIFont(name: "Stolzl-Regular", size: 14.0)!, forKey: NSAttributedString.Key.font as NSCopying)
+//        segControl.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] , for: .normal)
         segControl.removeBorder()
         viewToSC.addSubview(segControl)
         segControl.snp.makeConstraints { make in
@@ -102,6 +106,7 @@ class HomeViewController: UIViewController {
 //        mapView.isMyLocationEnabled = true
         print("my location")
     }
+    
     
 
 

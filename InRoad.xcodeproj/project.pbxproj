@@ -16,6 +16,7 @@
 		1D03B32029A0E4950004589A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B31F29A0E4950004589A /* SettingsViewController.swift */; };
 		1D03B32329A0EB3D0004589A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B32229A0EB3D0004589A /* UIColorExtension.swift */; };
 		1D0E282529A3985A00A95E1E /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E282429A3985A00A95E1E /* SettingsCell.swift */; };
+		1D2F77F529A74B2200B39905 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F77F429A74B2200B39905 /* FeedbackViewController.swift */; };
 		1D95835B29A527610011B013 /* Stolzl-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D95835A29A527610011B013 /* Stolzl-Medium.ttf */; };
 		1D95835D29A5282A0011B013 /* Stolzl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D95835C29A5282A0011B013 /* Stolzl-Regular.ttf */; };
 		1DD797D429A21B4C00440070 /* SegmentedControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */; };
@@ -34,6 +35,7 @@
 		1D03B31F29A0E4950004589A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1D03B32229A0EB3D0004589A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1D0E282429A3985A00A95E1E /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		1D2F77F429A74B2200B39905 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		1D95835A29A527610011B013 /* Stolzl-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stolzl-Medium.ttf"; sourceTree = "<group>"; };
 		1D95835C29A5282A0011B013 /* Stolzl-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stolzl-Regular.ttf"; sourceTree = "<group>"; };
 		1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlExtension.swift; sourceTree = "<group>"; };
@@ -75,8 +77,6 @@
 		1D03B30629A0E30D0004589A /* InRoad */ = {
 			isa = PBXGroup;
 			children = (
-				1DE81E4329A51831007FED19 /* Fonts */,
-				1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */,
 				1D03B32129A0E4AB0004589A /* View */,
 				1D03B30729A0E30D0004589A /* AppDelegate.swift */,
 				1D03B30929A0E30D0004589A /* SceneDelegate.swift */,
@@ -84,6 +84,8 @@
 				1D03B31229A0E30E0004589A /* LaunchScreen.storyboard */,
 				1D03B31529A0E30E0004589A /* Info.plist */,
 				1D03B32229A0EB3D0004589A /* UIColorExtension.swift */,
+				1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */,
+				1DE81E4329A51831007FED19 /* Fonts */,
 			);
 			path = InRoad;
 			sourceTree = "<group>";
@@ -95,6 +97,7 @@
 				1D03B31F29A0E4950004589A /* SettingsViewController.swift */,
 				1D03B30B29A0E30D0004589A /* MainTabBarController.swift */,
 				1D0E282429A3985A00A95E1E /* SettingsCell.swift */,
+				1D2F77F429A74B2200B39905 /* FeedbackViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				1DD797D429A21B4C00440070 /* SegmentedControlExtension.swift in Sources */,
 				1D03B30C29A0E30D0004589A /* MainTabBarController.swift in Sources */,
 				1D03B30829A0E30D0004589A /* AppDelegate.swift in Sources */,
+				1D2F77F529A74B2200B39905 /* FeedbackViewController.swift in Sources */,
 				1D03B30A29A0E30D0004589A /* SceneDelegate.swift in Sources */,
 				1D03B32029A0E4950004589A /* SettingsViewController.swift in Sources */,
 				1D03B31E29A0E4810004589A /* HomeViewController.swift in Sources */,
