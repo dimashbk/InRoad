@@ -19,6 +19,7 @@
 		1D2F77F529A74B2200B39905 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F77F429A74B2200B39905 /* FeedbackViewController.swift */; };
 		1D95835B29A527610011B013 /* Stolzl-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D95835A29A527610011B013 /* Stolzl-Medium.ttf */; };
 		1D95835D29A5282A0011B013 /* Stolzl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D95835C29A5282A0011B013 /* Stolzl-Regular.ttf */; };
+		1DCD6CD729A75DD500AB33A4 /* EndFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD6CD629A75DD500AB33A4 /* EndFeedbackViewController.swift */; };
 		1DD797D429A21B4C00440070 /* SegmentedControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */; };
 		62882847A41A8F9D52BEC525 /* Pods_InRoad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AA1EF9F0E0E50B1531EA17 /* Pods_InRoad.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		1D2F77F429A74B2200B39905 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		1D95835A29A527610011B013 /* Stolzl-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stolzl-Medium.ttf"; sourceTree = "<group>"; };
 		1D95835C29A5282A0011B013 /* Stolzl-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stolzl-Regular.ttf"; sourceTree = "<group>"; };
+		1DCD6CD629A75DD500AB33A4 /* EndFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndFeedbackViewController.swift; sourceTree = "<group>"; };
 		1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlExtension.swift; sourceTree = "<group>"; };
 		21577A90278CE0E186D6AC00 /* Pods-InRoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InRoad.release.xcconfig"; path = "Target Support Files/Pods-InRoad/Pods-InRoad.release.xcconfig"; sourceTree = "<group>"; };
 		9EC3FD1C277787C732AC0C63 /* Pods-InRoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InRoad.debug.xcconfig"; path = "Target Support Files/Pods-InRoad/Pods-InRoad.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				1D03B30B29A0E30D0004589A /* MainTabBarController.swift */,
 				1D0E282429A3985A00A95E1E /* SettingsCell.swift */,
 				1D2F77F429A74B2200B39905 /* FeedbackViewController.swift */,
+				1DCD6CD629A75DD500AB33A4 /* EndFeedbackViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD797D429A21B4C00440070 /* SegmentedControlExtension.swift in Sources */,
+				1DCD6CD729A75DD500AB33A4 /* EndFeedbackViewController.swift in Sources */,
 				1D03B30C29A0E30D0004589A /* MainTabBarController.swift in Sources */,
 				1D03B30829A0E30D0004589A /* AppDelegate.swift in Sources */,
 				1D2F77F529A74B2200B39905 /* FeedbackViewController.swift in Sources */,
