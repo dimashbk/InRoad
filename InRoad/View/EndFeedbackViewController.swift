@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EndFeedbackViewController: UIViewController {
+final class EndFeedbackViewController: UIViewController {
 
     var label = UILabel()
     var backButton = UIButton()

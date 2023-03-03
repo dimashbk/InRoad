@@ -7,23 +7,71 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
+final class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
-    let tableView = UITableView()
-    let feedbackButton = UIButton()
-    let cellId = "au"
-    let settings = ["Режим пользования","Тип автомобиля","Изменить город","Выбрать язык приложения"]
+    let settings = ["Режим пользования",
+                    "Тип автомобиля",
+                    "Изменить город",
+                    "Выбрать язык приложения"]
+    private lazy var  tableView: UITableView = {
+        
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(SettingsCell.self, forCellReuseIdentifier: "cell")
+        
+        return tableView
+    }()
+    let feedbackButton: UIButton = {
+        
+        let feedbackButton = UIButton()
+        feedbackButton.backgroundColor = .tabBarItemAccent
+        feedbackButton.layer.cornerRadius = 16
+        feedbackButton.setTitle("Написать отзыв", for: .normal)
+        feedbackButton.titleLabel?.font = UIFont(name: "Stolzl-Medium", size: 16)
+        feedbackButton.addTarget(self, action: #selector(toFeedback), for: .touchUpInside)
+        
+        return feedbackButton
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(SettingsCell.self, forCellReuseIdentifier: cellId)
-        initilize()
-
+        setup()
+        
     }
+    private func setup(){
+        initilize()
+        makeConstraints()
+    }
+    private func makeConstraints(){
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        feedbackButton.snp.makeConstraints { make in
+            make.height.equalTo(53)
+            make.width.equalTo(352)
+            make.centerX.equalToSuperview()
+            
+            make.top.equalToSuperview().inset(661)
+        }
+        
+    }
+    
+    private func initilize(){
+        view.backgroundColor = .white
+        view.addSubview(tableView)
+        view.addSubview(feedbackButton)
+    }
+    @objc func toFeedback(){
+        navigationController?.pushViewController(FeedbackViewController(), animated: true)
+    }
+    
+}
 
+extension SettingsViewController{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-           // #warning Incomplete implementation, return the number of sections
            return 1
        }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +79,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SettingsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SettingsCell
         cell.label.text = settings[indexPath.row]
         return cell
     }
@@ -40,33 +88,5 @@ class SettingsViewController: UIViewController, UITableViewDelegate,UITableViewD
            return 64
         }
     
-    private func initilize(){
-        view.backgroundColor = .white
-        view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        view.addSubview(feedbackButton)
-        feedbackButton.backgroundColor = .tabBarItemAccent
-        feedbackButton.layer.cornerRadius = 16
-        feedbackButton.setTitle("Написать отзыв", for: .normal)
-        feedbackButton.titleLabel?.font = UIFont(name: "Stolzl-Medium", size: 16)
-        feedbackButton.addTarget(self, action: #selector(toFeedback), for: .touchUpInside)
-        feedbackButton.snp.makeConstraints { make in
-            make.height.equalTo(53)
-            make.width.equalTo(352)
-            make.centerX.equalToSuperview()
-            
-            make.top.equalToSuperview().inset(661)
-        }
-    }
-    @objc func toFeedback(){
-        present(FeedbackViewController(), animated: true)
-    }
-    
 }
-
 

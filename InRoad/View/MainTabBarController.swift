@@ -7,8 +7,8 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
-
+final class MainTabBarController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generateTabBar()
@@ -19,26 +19,31 @@ class MainTabBarController: UITabBarController {
             generateVC(viewController: HomeViewController(),
                        title: "Карта",
                        image: UIImage(named: "Map")),
+            
             generateVC(viewController: SettingsViewController(),
                        title: "Настройки",
                        image: UIImage(named: "Settings"))
         ]
     }
-//    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UINavigationController{
-//        viewController.tabBarItem.title = title
-//        viewController.tabBarItem.image = image
-//        let navController = UINavigationController(rootViewController: viewController)
-//        return navController
-//    }
-    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController{
+    
+        private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UINavigationController{
             viewController.tabBarItem.title = title
             viewController.tabBarItem.image = image
-            return viewController
+            let navController = UINavigationController(rootViewController: viewController)
+            return navController
         }
+//    private func generateVC(viewController: UIViewController,
+//                            title: String,
+//                            image: UIImage?) -> UIViewController {
+//        viewController.tabBarItem.title = title
+//        viewController.tabBarItem.image = image
+//        return viewController
+//    }
+    
     private func setTabBarAppearance(){
         tabBar.tintColor = .tabBarItemAccent
         tabBar.backgroundColor = .white
     }
-
+    
 }
 

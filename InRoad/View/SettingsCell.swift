@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class SettingsCell: UITableViewCell {
+final class SettingsCell: UITableViewCell {
     
 
     let label = UILabel()
