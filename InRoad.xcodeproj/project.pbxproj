@@ -79,30 +79,254 @@
 		1D03B30629A0E30D0004589A /* InRoad */ = {
 			isa = PBXGroup;
 			children = (
-				1D03B32129A0E4AB0004589A /* View */,
-				1D03B30729A0E30D0004589A /* AppDelegate.swift */,
-				1D03B30929A0E30D0004589A /* SceneDelegate.swift */,
-				1D03B31029A0E30E0004589A /* Assets.xcassets */,
-				1D03B31229A0E30E0004589A /* LaunchScreen.storyboard */,
+				1D4BF86A29B1E0E9005BA6FA /* Application Layer */,
+				1D4BF86B29B1E148005BA6FA /* Presentation Layer */,
+				1D4BF88929B1E562005BA6FA /* Network Layers */,
+				1D4BF88729B1E52C005BA6FA /* Business Logic Layer */,
+				1D4BF88229B1E465005BA6FA /* Core Layer */,
 				1D03B31529A0E30E0004589A /* Info.plist */,
-				1D03B32229A0EB3D0004589A /* UIColorExtension.swift */,
-				1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */,
-				1DE81E4329A51831007FED19 /* Fonts */,
 			);
 			path = InRoad;
 			sourceTree = "<group>";
 		};
-		1D03B32129A0E4AB0004589A /* View */ = {
+		1D4BF86A29B1E0E9005BA6FA /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1D03B31229A0E30E0004589A /* LaunchScreen.storyboard */,
+				1D03B30929A0E30D0004589A /* SceneDelegate.swift */,
+				1D03B30729A0E30D0004589A /* AppDelegate.swift */,
+			);
+			path = "Application Layer";
+			sourceTree = "<group>";
+		};
+		1D4BF86B29B1E148005BA6FA /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF87D29B1E43F005BA6FA /* Person */,
+				1D4BF87C29B1E430005BA6FA /* Car */,
+				1D4BF86C29B1E1B3005BA6FA /* Onboarding */,
+				1D4BF86E29B1E1CF005BA6FA /* TabBar */,
+				1D4BF87029B1E33F005BA6FA /* Home */,
+				1D4BF87629B1E3AD005BA6FA /* Settings */,
+				1D4BF87929B1E3D7005BA6FA /* FeedBack */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		1D4BF86C29B1E1B3005BA6FA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1D4BF86E29B1E1CF005BA6FA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF86F29B1E31D005BA6FA /* View */,
+				1D4BF87229B1E368005BA6FA /* ViewModel */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1D4BF86F29B1E31D005BA6FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D03B30B29A0E30D0004589A /* MainTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D4BF87029B1E33F005BA6FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF87429B1E394005BA6FA /* View */,
+				1D4BF87529B1E39B005BA6FA /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1D4BF87229B1E368005BA6FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D4BF87429B1E394005BA6FA /* View */ = {
 			isa = PBXGroup;
 			children = (
 				1D03B31D29A0E4810004589A /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D4BF87529B1E39B005BA6FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D4BF87629B1E3AD005BA6FA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF87729B1E3B4005BA6FA /* View */,
+				1D4BF87829B1E3B9005BA6FA /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		1D4BF87729B1E3B4005BA6FA /* View */ = {
+			isa = PBXGroup;
+			children = (
 				1D03B31F29A0E4950004589A /* SettingsViewController.swift */,
-				1D03B30B29A0E30D0004589A /* MainTabBarController.swift */,
 				1D0E282429A3985A00A95E1E /* SettingsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D4BF87829B1E3B9005BA6FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D4BF87929B1E3D7005BA6FA /* FeedBack */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF87A29B1E3E2005BA6FA /* View */,
+				1D4BF87B29B1E3E6005BA6FA /* ViewModel */,
+			);
+			path = FeedBack;
+			sourceTree = "<group>";
+		};
+		1D4BF87A29B1E3E2005BA6FA /* View */ = {
+			isa = PBXGroup;
+			children = (
 				1D2F77F429A74B2200B39905 /* FeedbackViewController.swift */,
 				1DCD6CD629A75DD500AB33A4 /* EndFeedbackViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1D4BF87B29B1E3E6005BA6FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D4BF87C29B1E430005BA6FA /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF88129B1E45A005BA6FA /* View */,
+				1D4BF88029B1E453005BA6FA /* ViewModel */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		1D4BF87D29B1E43F005BA6FA /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF87F29B1E44F005BA6FA /* View */,
+				1D4BF87E29B1E44A005BA6FA /* ViewModel */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		1D4BF87E29B1E44A005BA6FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D4BF87F29B1E44F005BA6FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D4BF88029B1E453005BA6FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D4BF88129B1E45A005BA6FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D4BF88229B1E465005BA6FA /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF88429B1E4C1005BA6FA /* Location Service */,
+				1D4BF88529B1E4D9005BA6FA /* Helps + Extensions */,
+				1DE81E4329A51831007FED19 /* Fonts */,
+				1D4BF88629B1E4FF005BA6FA /* Constants */,
+				1D4BF88329B1E497005BA6FA /* Resources */,
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		1D4BF88329B1E497005BA6FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D03B31029A0E30E0004589A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D4BF88429B1E4C1005BA6FA /* Location Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Location Service";
+			sourceTree = "<group>";
+		};
+		1D4BF88529B1E4D9005BA6FA /* Helps + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D03B32229A0EB3D0004589A /* UIColorExtension.swift */,
+				1DD797D329A21B4C00440070 /* SegmentedControlExtension.swift */,
+			);
+			path = "Helps + Extensions";
+			sourceTree = "<group>";
+		};
+		1D4BF88629B1E4FF005BA6FA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1D4BF88729B1E52C005BA6FA /* Business Logic Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF88829B1E535005BA6FA /* Models */,
+			);
+			path = "Business Logic Layer";
+			sourceTree = "<group>";
+		};
+		1D4BF88829B1E535005BA6FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D4BF88929B1E562005BA6FA /* Network Layers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network Layers";
 			sourceTree = "<group>";
 		};
 		1DE81E4329A51831007FED19 /* Fonts */ = {

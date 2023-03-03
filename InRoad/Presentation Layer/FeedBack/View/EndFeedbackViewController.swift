@@ -19,6 +19,7 @@ final class EndFeedbackViewController: UIViewController {
         
     }
     private func initialize(){
+        
         view.addSubview(label)
         label.text = "Спасибо!                                     Ваш отзыв успешно отправлен"
         label.textColor = UIColor(red: 0.204, green: 0.204, blue: 0.204, alpha: 1)
